@@ -52,7 +52,7 @@ def paciente_view(request, id):
 	elif request.method == "POST":
 		humor = request.POST.get("humor")
 		registro_geral = request.POST.get("registro_geral")
-		video = request.POST.get("video")
+		video = request.FILES.get("video")
 		tarefas = request.POST.getlist("tarefas")
 		
 		consultas = Consultas(
